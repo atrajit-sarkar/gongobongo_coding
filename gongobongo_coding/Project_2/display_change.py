@@ -1,4 +1,6 @@
 import time
+#My thoughts:
+
 
 # while True:
 #   t=int(time.strftime("%S"))
@@ -21,10 +23,39 @@ import time
 #     print("Our family is here\r",end="")
 #     t=int(time.strftime("%S"))
 
+#Taken help from the internet and used time.sleep function.
 
-dis="Samaresh, Atrajit, Anshu, Soutam, Hrishav together make our family!"
-print(len(dis))
-i=0
-while i<len(dis):
-  print(dis[i],end="")
-  i+=1
+
+# dis="Samaresh, Atrajit, Anshu, Soutam, Hrishav, Our family is here"
+# i=0
+# while i<len(dis):
+#   print(dis[i],end="",flush=True)
+#   i+=1
+#   time.sleep(0.3)
+
+
+#Now using time.sleep function we will recreat the above display method easily.
+
+# dis=["Samaresh          ","Atrajit           ","Anshu             ","Soutam            ",
+#      "Hrishav           ","Our family is here"]
+
+# while True:
+#   for i in dis:
+#     print(i,"\r",end=" ")
+#     time.sleep(1)
+
+
+
+#Final Formatting of the display:
+
+
+
+dis=["Samaresh          ","Atrajit           ","Anshu             ","Soutam            ",
+   "Hrishav           ","Our family is here     "]
+
+while True:
+  for i in dis:
+    for j in i:
+      print(j,end="",flush=True)
+      time.sleep(0.3)
+    print("\r                  \r",end="")  
